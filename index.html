@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Valeria Quintero</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Valeria Quintero. Personal home page showcasing Valeria's background, interests, and information about Caracas, Venezuela." />
+    <meta name="author" content="Valeria Quintero" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- main CSS -->
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <!-- javaScript -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/valeria-quintero-456996264/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <!--main-->
+    <main>
+        <h1>Valeria Quintero</h1>
+
+        <!-- about Me -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <p>
+                    My name is Valeria I was born in Caracas,
+                    Venezuela, where I currently live with my family. I am a
+                    BYU Pathway student, pursuing a degree in Web Development.
+                    I love finding what's broken and making it better. Currently,
+                    I'm working remotely in healthcare operations and have previous
+                    experience as a functional QA intern for a SAAS fintech company,
+                    with the dream of becoming a UX/UI Designer. In my free time,
+                    I love arts, painting, and exploring new creative outlets.
+                </p>
+                <img
+                src="images/valeria.png"
+                alt="Valeria Quintero smiling"
+                width="200"
+                height="200"
+                loading="lazy"
+                />
+            </div>
+        </section>
+
+        <!-- Caracas, Venezuela -->
+        <section class="card">
+            <h2>Caracas, Venezuela</h2>
+            <div class="card-content">
+                <p>
+                    Caracas is the capital and largest city of Venezuela, nestled
+                    in a valley of the Caribbean mountain range. It is known for
+                    its vibrant cultural scene, beautiful El Ávila National Park,
+                    and rich history. The city is a hub for arts, music, and
+                    gastronomy, reflecting the diverse heritage of the country.
+                    Venezuela is also home to the world's highest uninterrupted
+                    waterfall, Angel Falls.
+                </p>
+                <img
+                src="images/caracas.png"
+                alt="Scenic view of Caracas, Venezuela"
+                width="200"
+                height="200"
+                loading="lazy"
+                />
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> Valeria Quintero – Caracas, Venezuela
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
