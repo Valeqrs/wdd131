@@ -1,0 +1,177 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* base body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7c8d3;
+    color: #2d3a47;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+header {
+    background-color: #2d3a47;
+    color: #fff7e6;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 4px solid #b46a72;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* hamburger button */
+#menu-button {
+    background: none;
+    border: 2px solid #fff7e6;
+    border-radius: 6px;
+    color: #fff7e6;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#menu-button:hover {
+    background-color: #b46a72;
+    border-color: #b46a72;
+    transform: scale(1.05);
+}
+
+/* nav menu hidden on mobile */
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #2d3a47;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 0;
+    border-bottom: 4px solid #b46a72;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* show nav when open class is added */
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #fff7e6;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+nav a:hover {
+    background-color: #b46a72;
+    border-left-color: #a8b58a;
+    padding-left: 2rem;
+}
+
+/* active page wayfinding */
+nav a.active {
+    background-color: #b46a72;
+    border-left-color: #a8b58a;
+    font-weight: 700;
+    color: #fff7e6;
+}
+
+/* indicator for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #a8b58a;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* main content */
+main {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3a47;
+}
+
+main p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* large screens hide hamburger,and show nav inline */
+@media screen and (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: transparent;
+        padding: 0;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1.2rem;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover {
+        background: transparent;
+        border-bottom-color: #a8b58a;
+        padding-left: 1.2rem;
+    }
+
+    nav a.active {
+        background: transparent;
+        border-bottom-color: #a8b58a;
+        border-left: none;
+        font-weight: 700;
+    }
+}
+
+/* footer */
+footer {
+    background-color: #2d3a47;
+    color: #fff7e6;
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid #b46a72;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
