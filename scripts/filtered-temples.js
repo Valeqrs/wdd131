@@ -1,5 +1,4 @@
-
-// Array of temple objects 
+// Array of temple objects
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -63,14 +62,14 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-1312217-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-1446196-wallpaper.jpg"
     },
     {
         templeName: "Buenos Aires Argentina",
         location: "Buenos Aires, Argentina",
         dedicated: "1986, January, 17",
         area: 30656,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-temple-27405-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-temple-1710700-wallpaper.jpg"
     }
 ];
 
@@ -184,5 +183,5 @@ navLinks.forEach(link => {
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initial render (Home - all temples)
+// (Home - all temples)
 renderTemples(temples);
