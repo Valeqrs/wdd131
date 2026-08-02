@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDS Temple Album - Filtered</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <ul>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old (before 1900)</a></li>
+                <li><a href="#" data-filter="new">New (after 2000)</a></li>
+                <li><a href="#" data-filter="large">Large (> 90,000 sq ft)</a></li>
+                <li><a href="#" data-filter="small">Small (< 10,000 sq ft)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="temple-cards-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+</html>
