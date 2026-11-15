@@ -1,3 +1,11 @@
+:root {
+    --color-cream: #F7F2E6;           
+    --color-lavender-medium: #CDBAF0; 
+    --color-purple: #9B86C9;          
+    --color-purple-dark: #4B3F66;     
+    --color-black: #000000;           
+}
+
 /* reset */
 * {
     box-sizing: border-box;
@@ -9,8 +17,8 @@
 body {
     font-family: 'Roboto', helvetica, sans-serif;
     margin: 1rem;
-    background-color: #f7c8d3;
-    color: #2d3a47;
+    background-color: var(--color-cream); /* #F7F2E6 */
+    color: var(--color-black);            /* #000000  #F7F2E6: ~19:1 (AAA) */
 }
 
 header,
@@ -26,15 +34,15 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff7e6;
+    background-color: var(--color-lavender-light); /* #EFE6FF */
     padding: 1rem 2rem;
     border-radius: 8px;
-    border-left: 4px solid #a8b58a;
+    border-left: 4px solid var(--color-purple-dark); /* #4B3F66 */
     margin-bottom: 2rem;
 }
 
 header h1 {
-    color: #2d3a47;
+    color: var(--color-black);
     margin: 0;
     border-bottom: none;
 }
@@ -50,7 +58,7 @@ nav ul {
 }
 
 nav a {
-    color: #2d3a47;
+    color: var(--color-black);
     text-decoration: none;
     font-weight: 700;
     padding: 0.5rem 0.75rem;
@@ -59,7 +67,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #e6f2ff;
+    background-color: var(--color-lavender-medium); /* #CDBAF0 */
+    /* #000000  #CDBAF0: ~11:1 (AAA) */
 }
 
 /* main container for temple cards */
@@ -72,11 +81,11 @@ nav a:hover {
 
 /* individual temple card */
 .temple-card {
-    background-color: #fff7e6;
+    background-color: var(--color-lavender-light); /* #EFE6FF */
     border-radius: 8px;
-    border-left: 4px solid #a8b58a;
+    border-left: 4px solid var(--color-purple-dark); /* #4B3F66 */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s;
     display: flex;
     flex-direction: column;
@@ -90,7 +99,7 @@ nav a:hover {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    background-color: #e6f2ff;
+    background-color: var(--color-purple); /* Fondo de carga de imagen */
 }
 
 .temple-card .card-content {
@@ -98,32 +107,32 @@ nav a:hover {
 }
 
 .temple-card h3 {
-    color: #2d3a47;
+    color: var(--color-black);
     margin-bottom: 0.5rem;
     font-weight: 700;
-    border-bottom: 2px solid #b46a72;
+    border-bottom: 2px solid var(--color-purple-dark); /* #4B3F66 */
     padding-bottom: 0.3rem;
 }
 
 .temple-card p {
     margin: 0.3rem 0;
     font-size: 0.95rem;
-    color: #2d3a47;
+    color: var(--color-black);
 }
 
 .temple-card .label {
     font-weight: 700;
-    color: #b46a72;
+    color: var(--color-purple-dark); /* #4B3F66  #EFE6FF: ~7.9:1 (AAA) */
 }
 
 /* footer */
 footer {
     margin-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--color-purple); /* #9B86C9 */
     padding: 0.5rem 0;
     font-size: smaller;
     text-align: left;
-    color: #2d3a47;
+    color: var(--color-black);
 }
 
 /* responsive adjustments */

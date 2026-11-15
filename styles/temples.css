@@ -6,19 +6,21 @@
 }
 
 :root {
-    --color-cream: #FFF7E6;
-    --color-blush: #F7C8D3;
-    --color-rosewood: #B46A72;
-    --color-sage: #A8B58A;
-    --color-misty: #A9B7C6;
-    --color-midnight: #2D3A47;
+    /* Nueva paleta basada en la imagen + Negro */
+    --color-cream: #F7F2E6;           /* Fondo principal */
+    --color-lavender-light: #EFE6FF;  /* Fondo de tarjetas y textos en header */
+    --color-lavender-medium: #CDBAF0; /* Hover y fondos de figcaption */
+    --color-purple: #9B86C9;          /* Bordes y acentos */
+    --color-purple-dark: #4B3F66;     /* Header, Footer y bordes fuertes */
+    --color-black: #000000;           /* Texto principal */
+    
     --font-heading: 'Merriweather', serif;
     --font-body: 'Inter', sans-serif;
 }
 
 body {
     background-color: var(--color-cream);
-    color: var(--color-midnight);
+    color: var(--color-black); /* #000000 sobre #F7F2E6: ~19:1 (AAA) */
     font-family: var(--font-body);
     line-height: 1.6;
     display: flex;
@@ -28,8 +30,8 @@ body {
 
 /* header */
 header {
-    background-color: var(--color-midnight);
-    color: white;
+    background-color: var(--color-purple-dark); /* #4B3F66 */
+    color: var(--color-cream); /* #F7F2E6 sobre #4B3F66: ~12:1 (AAA) */
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -48,6 +50,7 @@ header {
     gap: 0.5rem;
     font-family: var(--font-heading);
     font-size: 1.4rem;
+    color: var(--color-lavender-light); /* #EFE6FF sobre #4B3F66: ~7.9:1 (AAA) */
 }
 
 .brand-icon {
@@ -56,17 +59,19 @@ header {
 
 #hamburger {
     background: none;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid var(--color-cream);
+    color: var(--color-cream);
     font-size: 1.8rem;
     padding: 0.2rem 0.7rem;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 #hamburger:hover {
-    background-color: var(--color-rosewood);
+    background-color: var(--color-lavender-medium);
+    color: var(--color-black); /* #000000 sobre #CDBAF0: ~11:1 (AAA) */
+    border-color: var(--color-lavender-medium);
 }
 
 /* nav hidden by default */
@@ -76,7 +81,7 @@ nav {
     overflow: hidden;
     transition: max-height 0.4s ease;
     max-height: 0;
-    background-color: var(--color-midnight);
+    background-color: var(--color-purple-dark);
 }
 
 nav.nav-open {
@@ -84,19 +89,20 @@ nav.nav-open {
 }
 
 nav a {
-    color: white;
+    color: var(--color-cream);
     text-decoration: none;
     padding: 0.7rem 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-purple); /* #9B86C9 */
     font-weight: 400;
     transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover,
 nav a:focus {
-    background-color: var(--color-blush);
-    color: var(--color-midnight);
+    background-color: var(--color-lavender-medium);
+    color: var(--color-black);
     border-radius: 4px;
+    outline: none;
 }
 
 /* main */
@@ -113,7 +119,7 @@ h1 {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--color-rosewood);
+    color: var(--color-black);
     letter-spacing: 1px;
 }
 
@@ -125,17 +131,17 @@ h1 {
 }
 
 figure {
-    background: white;
+    background: var(--color-lavender-light); /* #EFE6FF */
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 18px rgba(75, 63, 102, 0.15);
     overflow: hidden;
-    transition: transform 0.2s ease;
-    border: 2px solid var(--color-misty);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 2px solid var(--color-purple);
 }
 
 figure:hover {
     transform: scale(1.01);
-    border-color: var(--color-sage);
+    border-color: var(--color-purple-dark);
 }
 
 figure img {
@@ -150,8 +156,8 @@ figcaption {
     padding: 0.8rem 1rem;
     font-weight: 700;
     text-align: center;
-    background-color: var(--color-blush);
-    color: var(--color-midnight);
+    background-color: var(--color-lavender-medium);
+    color: var(--color-black); /* #000000  #CDBAF0: ~11:1 (AAA) */
     font-size: 1.1rem;
     letter-spacing: 0.3px;
     font-family: var(--font-body);
@@ -159,12 +165,12 @@ figcaption {
 
 /* footer */
 footer {
-    background-color: var(--color-midnight);
-    color: white;
+    background-color: var(--color-purple-dark);
+    color: var(--color-cream);
     text-align: center;
     padding: 1.5rem 1rem;
     font-size: 0.95rem;
-    border-top: 6px solid var(--color-rosewood);
+    border-top: 6px solid var(--color-purple);
     margin-top: 2rem;
 }
 
@@ -174,5 +180,5 @@ footer p {
 
 footer span {
     font-weight: 700;
-    color: var(--color-blush);
+    color: var(--color-lavender-light); /* #EFE6FF  #4B3F66: ~7.9:1 (AAA) */
 }
